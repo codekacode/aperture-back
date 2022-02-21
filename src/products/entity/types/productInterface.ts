@@ -12,3 +12,5 @@ export interface Product {
 export type ProductIdType = {
     _id: Types.ObjectId
 }
+
+export type CreateProduct = Omit<Product, 'id' | 'createdAt' | 'editedAt' >

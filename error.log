@@ -1,0 +1,7 @@
+{"level":"error","message":"CreateProductService Product validation failed: price: Se requiere un precio para el producto, name: Se requiere un nombre para el producto","service":"user-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: price: Se requiere un precio para el producto, name: Se requiere un nombre para el producto","service":"user-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: price: Se requiere un precio para el producto, name: Se requiere un nombre para el producto","service":"user-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: price: Se requiere un precio para el producto, name: Se requiere un nombre para el producto","service":"user-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: price: Se requiere un precio para el producto, name: Se requiere un nombre para el producto","service":"user-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: price: Se requiere un precio para el producto, name: Se requiere un nombre para el producto","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: price: Se requiere un precio para el producto, name: Se requiere un nombre para el producto","service":"product-service","type":"mongoose"}
