@@ -14,3 +14,5 @@ export type ProductIdType = {
 }
 
 export type CreateProduct = Omit<Product, 'id' | 'createdAt' | 'editedAt' >
+
+export type EditProduct = Omit<Product, 'id' | 'createdAt' | 'editedAt' >

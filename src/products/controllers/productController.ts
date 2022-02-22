@@ -1,8 +1,10 @@
+import { editProductService } from '../services/editProductService';
 import { getProductsAllService } from './../services/getProductsAllService';
 import { Request, Response } from 'express';
 import { logger } from "../../logger/appLogger";
-import { CreateProduct } from '../entity/types/productInterface';
+import { CreateProduct, EditProduct } from '../entity/types/productInterface';
 import { createProductService } from '../services/createProductService';
+import { getProductByIdService } from '../services/getProductByIdService';
 
 
 export const getProducts = async (req: Request, res: Response) => {
@@ -26,5 +28,30 @@ export const createProduct = async (
 
     } catch (err: any) {
         logger.error("Error crear producto",{message: err.message})
+    }
+}
+
+export const editProduct = async (
+    req: Request<{ prod_id: string}, {}, EditProduct >, 
+    res: Response
+) => {
+    try {
+        const updateTask = await editProductService(req.params.prod_id, req.body)
+        res.status(200).json({data: updateTask})
+    } catch(err) {
+        throw err
+    }
+
+}
+
+export const getProductById = async (
+    req: Request<{ prod_id: string }>, 
+    res: Response
+) => {
+    try {
+        const getProductById = await getProductByIdService(req.params.prod_id)
+        res.status(200).json(getProductById)
+    } catch(err) {
+        throw err
     }
 }
