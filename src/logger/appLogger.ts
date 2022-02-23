@@ -1,4 +1,4 @@
-import winston from "winston";
+import winston from 'winston';
 
 export const logger = winston.createLogger({
   level: 'info',
@@ -10,8 +10,8 @@ export const logger = winston.createLogger({
     // - Write all logs with importance level of `info` or less to `combined.log`
     //
     new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' }),
-  ],
+    new winston.transports.File({ filename: 'combined.log' })
+  ]
 });
 
 //
@@ -19,7 +19,9 @@ export const logger = winston.createLogger({
 // `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
 //
 if (process.env.NODE_ENV !== 'production') {
-  logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }));
+  logger.add(
+    new winston.transports.Console({
+      format: winston.format.simple()
+    })
+  );
 }

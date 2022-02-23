@@ -1,9 +1,9 @@
-import app from "./app";
+import app from './app';
 import dotenv from 'dotenv';
-import { createDbConnection } from "./config/databaseConfig";
+import { createDbConnection } from './config/databaseConfig';
 
 dotenv.config();
 
-createDbConnection(`${process.env.MONGO_URI}`)
+createDbConnection(`${process.env.MONGO_URI}`);
 
-app.listen(process.env.PORT)
+app.listen(process.env.PORT);
