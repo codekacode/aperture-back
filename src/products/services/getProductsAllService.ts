@@ -15,3 +15,5 @@ export const getProductsAllService = async (): Promise<Product[]> => {
     throw new Error(err.message);
   }
 };
+
+

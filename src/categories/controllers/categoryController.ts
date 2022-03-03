@@ -4,6 +4,8 @@ import { Request, Response } from 'express';
 import { createCategoryService } from './../services/createCategoryService';
 import { CreateCategory, EditCategory } from "../entity/types/categoryInterface";
 import { logger } from '../../logger/appLogger';
+import { deleteProductByIdService } from '../../products/services/deleteProductByIdService';
+import { deleteCategoryService } from '../services/deleteCategoryService';
 
 export const getAllCategories = async (
   req: Request,
@@ -37,6 +39,18 @@ export const editCategory = async (
   try {
     const updateCategory = await editCategoryService(req.params.cat_id, req.body);
     res.status(200).json({data: updateCategory})
+  } catch (err) {
+    logger.error(err)
+  }
+}
+
+export const deleteCategory = async (
+  req: Request<{ cat_id: string}>,
+  res: Response
+) => {
+  try {
+    const deleteCategoryById = await deleteCategoryService(req.params.cat_id)
+    res.status(204).json(deleteCategoryById)
   } catch (err) {
     logger.error(err)
   }
