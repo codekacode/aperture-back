@@ -1,3 +1,4 @@
+import { PurchaseOrderId } from './../../../purchaseOrder/entity/types/purchaseOrderInterfase';
 import { Types } from 'mongoose';
 
 export interface Product {
@@ -7,6 +8,7 @@ export interface Product {
   description: string;
   createdAt: Date;
   editedAt: Date | null;
+  purchaseOrder: string | PurchaseOrderId
 }
 
 export type ProductIdType = {
