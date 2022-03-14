@@ -8,3 +8,5 @@ router
   .post(
     createPurchaseOrder
   );
+
+export default router;

@@ -7,8 +7,8 @@ export const getAllUsersService = async(): Promise<User[]> => {
   try {
     const users: User[] = await UserModel.find({})
     return users
-  } catch (err) {
+  } catch (err: any) {
     logger.error(err)
-    throw err
+    throw new Error(err)
   }
 }

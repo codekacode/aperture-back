@@ -17,12 +17,19 @@ export const getProducts = async (req: Request, res: Response) => {
 };
 
 export const createProduct = async (
-  req: Request<{}, {}, CreateProduct>,
+  req: Request<
+    {purchaseOrderId: string},
+    {},
+    { name: string, price: number, description: string}>,
   res: Response
 ) => {
   try {
-    const newProduct: CreateProduct = req.body;
-    const product = await createProductService(newProduct);
+    const { name, price, description} = req.body;
+    const product = await createProductService({
+      name,
+      price,
+      description
+    });
     res.status(201).json({ data: product });
   } catch (err: any) {
     logger.error('Error crear producto', { message: err.message });

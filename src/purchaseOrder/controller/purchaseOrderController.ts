@@ -13,7 +13,7 @@ export const createPurchaseOrder = async (
   try {
     const newOrder = await createPurchaseOrderService({
       orderNumber,
-      owner: '',
+      owner: req.userId,
     })
     res.status(201).json({ data:newOrder })
   } catch (error: any) {

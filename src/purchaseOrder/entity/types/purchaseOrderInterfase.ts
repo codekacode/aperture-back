@@ -1,11 +1,11 @@
 import { UserIdType } from './../../../users/entity/types/User';
-import { Product } from './../../../products/entity/types/productInterface';
+import { Product, ProductIdType } from './../../../products/entity/types/productInterface';
 import { Types } from 'mongoose';
 
 export interface PurchaseOrder {
   id: PurchaseOrderId;
   orderNumber: string;
-  products: Product[];
+  orderLines: PurchaseOrderLine[];
   createdAt: Date;
   updatedAt: Date;
   owner: UserIdType;
@@ -18,4 +18,10 @@ export type PurchaseOrderId = {
 export type CreatePurchaseOrder = {
   orderNumber: string;
   owner: string;
+}
+
+export type PurchaseOrderLine = {
+  productId: ProductIdType;
+  quantity: number;
+  totalAmount: number;
 }

@@ -5,3 +5,47 @@
 {"level":"error","message":"CreateProductService Product validation failed: price: Se requiere un precio para el producto, name: Se requiere un nombre para el producto","service":"user-service","type":"mongoose"}
 {"level":"error","message":"CreateProductService Product validation failed: price: Se requiere un precio para el producto, name: Se requiere un nombre para el producto","service":"product-service","type":"mongoose"}
 {"level":"error","message":"CreateProductService Product validation failed: price: Se requiere un precio para el producto, name: Se requiere un nombre para el producto","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: a project must be provided for a task","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: a project must be provided for a task","service":"product-service","type":"mongoose"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":{},"service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: a project must be provided for a task","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: a project must be provided for a task","service":"product-service","type":"mongoose"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: Cast to ObjectId failed for value \"\" (type string) at path \"owner\", orderNumber: purchase order is required - PurchaseOrderSchema"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a project"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a project"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a project"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a project"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a project"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: a project must be provided for a task","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: puchase order must be provided for product","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: Cast to ObjectId failed for value \"12345\" (type string) at path \"purchaseOrder\"","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: Cast to ObjectId failed for value \"12345\" (type string) at path \"purchaseOrder\"","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: puchase order must be provided for product","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: puchase order must be provided for product","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: puchase order must be provided for product","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: puchase order must be provided for product","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: puchase order must be provided for product","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: puchase order must be provided for product","service":"product-service","type":"mongoose"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}

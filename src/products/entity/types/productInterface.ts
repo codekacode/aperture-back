@@ -6,15 +6,15 @@ export interface Product {
   name: string;
   price: number;
   description: string;
+  status: boolean;
   createdAt: Date;
   editedAt: Date | null;
-  purchaseOrder: string | PurchaseOrderId
 }
 
 export type ProductIdType = {
   _id: Types.ObjectId;
 };
 
-export type CreateProduct = Omit<Product, 'id' | 'createdAt' | 'editedAt'>;
+export type CreateProduct = Omit<Product, 'id' | 'createdAt' | 'editedAt' | 'status'>;
 
 export type EditProduct = Omit<Product, 'id' | 'createdAt' | 'editedAt'>;

@@ -17,7 +17,7 @@ export const PurchaseOrderSchema = new Schema<PurchaseOrder>({
   owner: {
     type: Schema.Types.ObjectId,
     ref: 'User',
-    required: [true, 'An user is required to create a project']
+    required: [true, 'An user is required to create a purchase order']
   }
 });
 

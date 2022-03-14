@@ -20,10 +20,9 @@ export const ProductSchema = new Schema<Product>({
   },
   editedAt: {
     type: Date
-  },
-  purchaseOrder: {
-    type: Schema.Types.ObjectId,
-    ref: 'PurchaseOrder',
-    required: [true, 'a project must be provided for a task']
   }
 });
+
+
+
+
