@@ -6,9 +6,7 @@ export const addCartProductsService = async (
   addLineRequest: AddLine
 ) => {
   try {
-    console.log(addLineRequest)
     const cart = await CartModel.findById(addLineRequest.cartId);
-    console.log(cart)
     const line: Line = { codProduct: addLineRequest.codProduct, quantity: addLineRequest.quantity}
     cart!.lines.push(line);
     return await cart!.save();

@@ -71,3 +71,15 @@
 {"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: puchase order must be provided for product","service":"product-service","type":"mongoose"}
 {"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}
 {"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}
+{"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a purchase order"}
+{"level":"error","service":"product-service"}
+{"level":"error","service":"product-service"}
+{"level":"error","message":"CreateProductService Operation `products.insertOne()` buffering timed out after 10000ms","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Operation `products.insertOne()` buffering timed out after 10000ms","service":"product-service","type":"mongoose"}
+{"level":"error","service":"product-service"}

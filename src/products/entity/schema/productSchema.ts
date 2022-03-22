@@ -1,3 +1,5 @@
+import { CategorySchema } from './../../../categories/entity/schema/categorySchema';
+import { Category, CategoryId } from './../../../categories/entity/types/categoryInterface';
 import { Product } from './../types/productInterface';
 import { Schema } from 'mongoose';
 
@@ -20,7 +22,11 @@ export const ProductSchema = new Schema<Product>({
   },
   editedAt: {
     type: Date
-  }
+  },
+  categories: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Category'
+  }]
 });
 
 

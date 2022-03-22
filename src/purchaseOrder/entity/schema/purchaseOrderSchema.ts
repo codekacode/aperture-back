@@ -1,12 +1,26 @@
+import { Product } from './../../../products/entity/types/productInterface';
 import { ProductModel } from './../../../products/entity/models/productModel';
-import { PurchaseOrder } from './../types/purchaseOrderInterfase';
+import { PurchaseOrder, PurchaseOrderLine } from './../types/purchaseOrderInterfase';
 import { Schema } from 'mongoose';
 
-export const PurchaseOrderSchema = new Schema<PurchaseOrder>({
-  orderNumber: {
-    type: String,
-    required:[true, 'purchase order is required - PurchaseOrderSchema']
+export const PurchaseOrderLineSchema = new Schema<PurchaseOrderLine>({
+  productId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Product',
   },
+  quantity:{
+    type: Number,
+  },
+  unitPrice:{
+    type: Number,
+  },
+  totalAmount: {
+    type: Number,
+  },
+})
+
+export const PurchaseOrderSchema = new Schema<PurchaseOrder>({
+  lines: [PurchaseOrderLineSchema],
   createdAt: {
     type: Date,
     default: new Date(),
@@ -21,18 +35,3 @@ export const PurchaseOrderSchema = new Schema<PurchaseOrder>({
   }
 });
 
-PurchaseOrderSchema.virtual('products', {
-  ref: 'Product',
-  localField: '_id',
-  foreignField: 'purchaseOrder'
-})
-
-
-PurchaseOrderSchema.pre('deleteOne', async function (next) {
-  const purchaseOrder = this.getFilter('purchaseOrder');
-  await ProductModel.deleteMany({purchaseOrder: purchaseOrder.id});
-  next();
-})
-
-PurchaseOrderSchema.set('toJSON', { virtuals: true });
-PurchaseOrderSchema.set('toObject', { virtuals: true });

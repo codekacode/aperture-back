@@ -1,12 +1,9 @@
+import { userTokenValidation } from './../../auth/middleware/userTokenValidation';
 import { createPurchaseOrder } from './../controller/purchaseOrderController';
 import { Router } from 'express';
 
 const router = Router();
 
-router
-  .route('/purchase_order')
-  .post(
-    createPurchaseOrder
-  );
+router.post('/purchase_order', userTokenValidation, createPurchaseOrder);
 
 export default router;

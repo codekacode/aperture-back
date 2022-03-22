@@ -17,6 +17,7 @@ app.use(categoryRoutes);
 app.use(authRoutes);
 app.use(purchaseOrderRoutes);
 app.use(cartRoutes);
+app.use(purchaseOrderRoutes);
 
 
 export default app;

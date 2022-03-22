@@ -1,3 +1,4 @@
+import { Category, CategoryId } from './../../../categories/entity/types/categoryInterface';
 import { PurchaseOrderId } from './../../../purchaseOrder/entity/types/purchaseOrderInterfase';
 import { Types } from 'mongoose';
 
@@ -9,6 +10,7 @@ export interface Product {
   status: boolean;
   createdAt: Date;
   editedAt: Date | null;
+  categories: [CategoryId] ;
 }
 
 export type ProductIdType = {

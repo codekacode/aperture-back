@@ -20,16 +20,18 @@ export const createProduct = async (
   req: Request<
     {purchaseOrderId: string},
     {},
-    { name: string, price: number, description: string}>,
+    CreateProduct>,
   res: Response
 ) => {
   try {
-    const { name, price, description} = req.body;
+    const { name, price, description, categories} = req.body;
     const product = await createProductService({
       name,
       price,
-      description
+      description,
+      categories
     });
+    await product!.populate("categories", "name description")
     res.status(201).json({ data: product });
   } catch (err: any) {
     logger.error('Error crear producto', { message: err.message });
@@ -60,7 +62,10 @@ export const getProductById = async (
   }
 };
 
-export const deleteProduct = async (req: Request<{ prod_id: string }>, res: Response) => {
+export const deleteProduct = async (
+  req: Request<{ prod_id: string }>,
+  res: Response
+) => {
   try {
     const deleteProductById = await deleteProductByIdService(req.params.prod_id);
     res.status(204).json(deleteProductById)

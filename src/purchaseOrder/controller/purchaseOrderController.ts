@@ -1,3 +1,4 @@
+import { CartId } from './../../cart/entity/types/cartInterface';
 import { createPurchaseOrderService } from './../services/createPurchaseOrderService';
 import { ApplicationError } from './../../shared/customErrors/ApplicationError';
 import { logger } from './../../logger/appLogger';
@@ -5,14 +6,14 @@ import { NextFunction, Request, Response } from 'express';
 import { deletePurchaseOrderService } from '../services/deletePurchaseOrderService';
 
 export const createPurchaseOrder = async (
-  req: Request<{}, {}, { orderNumber: string }>,
+  req: Request<{}, {}, { cartId: CartId }>,
   res: Response,
   next: NextFunction
 ): Promise<void> => {
-  const { orderNumber } = req.body;
+  const { cartId } = req.body;
   try {
     const newOrder = await createPurchaseOrderService({
-      orderNumber,
+      cartId ,
       owner: req.userId,
     })
     res.status(201).json({ data:newOrder })
