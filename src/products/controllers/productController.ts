@@ -1,3 +1,4 @@
+import { getProductByCategoryService } from './../services/getProductByCategoryService';
 import { editProductService } from '../services/editProductService';
 import { getProductsAllService } from './../services/getProductsAllService';
 import { Request, Response } from 'express';
@@ -67,9 +68,23 @@ export const deleteProduct = async (
   res: Response
 ) => {
   try {
-    const deleteProductById = await deleteProductByIdService(req.params.prod_id);
-    res.status(204).json(deleteProductById)
+    const product = await deleteProductByIdService(req.params.prod_id);
+    res.status(204).json(product)
   } catch (err) {
     throw err;
   }
-};
+}
+
+
+export const getProductByCategory = async (
+  req: Request<{ cat_id: string}>,
+  res: Response
+) => {
+  try {
+    const products = await getProductByCategoryService(req.params.cat_id);
+    console.log(products)
+    res.status(200).json(products);
+  } catch (err) {
+    throw err;
+  }
+}

@@ -61,3 +61,7 @@
 {"level":"error","message":"CreateProductService Operation `products.insertOne()` buffering timed out after 10000ms","service":"product-service","type":"mongoose"}
 {"level":"error","message":"CreateProductService Operation `products.insertOne()` buffering timed out after 10000ms","service":"product-service","type":"mongoose"}
 {"level":"error","service":"product-service"}
+{"level":"error","message":"error consultar categoria","service":"getProductByCategoryService","trace":"Can't use $contains with Array."}
+{"level":"error","message":"error consultar categoria","service":"getProductByCategoryService","trace":"Can't use $contains with Array."}
+{"level":"error","message":"error consultar categoria","service":"getProductByCategoryService","trace":"Can't use $contains with Array."}
+{"level":"error","message":"error consultar categoria","service":"getProductByCategoryService","trace":"Can't use $contains with Array."}
