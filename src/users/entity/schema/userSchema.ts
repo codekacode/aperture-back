@@ -15,6 +15,10 @@ export const UserSchema = new Schema<User>({
     type: String,
     required: true
   },
+  isAdmin: {
+    type: Boolean,
+    default: false
+  },
   createdAt: {
     type: Date,
     default: new Date()

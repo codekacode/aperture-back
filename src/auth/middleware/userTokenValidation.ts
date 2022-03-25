@@ -13,10 +13,11 @@ export const userTokenValidation = (
     if (!authorization) {
       return next(new ApplicationError(401, 'No token provided'))
     }
-    const { id } = validateToken(authorization);
+    const { id, isAdmin } = validateToken(authorization);
     if (!id) return next(new ApplicationError(401, 'Unvalid token'))
 
     req.userId = id;
+    req.userIsAdmin = isAdmin;
 
     next();
 

@@ -4,11 +4,12 @@ import { UserIdType } from './../../users/entity/types/User.d';
 
 
 export const authCreateTokenService = (
-  userId: string | UserIdType
+  userId: string | UserIdType,
+  isAdmin: boolean
 ): { authToken: string; refreshToken: string} => {
   try {
     return {
-      authToken: createAuthToken({ id: userId }),
+      authToken: createAuthToken({ id: userId, isAdmin: isAdmin}),
       refreshToken: createRefreshToken({ id: userId })
     };
   } catch (error: any) {

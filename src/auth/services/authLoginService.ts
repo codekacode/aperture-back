@@ -23,7 +23,7 @@ export const authLoginService = async (
     const auth = await validatePassword(userRequest.password, user.password);
 
     if (!auth) throw new Error('user email or password is incorrect - authLoginService');
-    const authToken = createAuthToken({id: user.id});
+    const authToken = createAuthToken({id: user.id, isAdmin: user.isAdmin});
     const refreshToken = await authCreateRefreshToken(user.id);
 
     return {

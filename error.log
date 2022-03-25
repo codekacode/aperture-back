@@ -29,7 +29,7 @@
 {"level":"error","service":"product-service"}
 {"level":"error","message":{},"service":"product-service"}
 {"level":"error","service":"product-service"}
-{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: a project must be provided for a task","service":"product-service","type":"mongoose"}
+{"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: a project must be provided for a task","service":"product-service","type":"mongoos"}
 {"level":"error","message":"CreateProductService Product validation failed: purchaseOrder: a project must be provided for a task","service":"product-service","type":"mongoose"}
 {"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: Cast to ObjectId failed for value \"\" (type string) at path \"owner\", orderNumber: purchase order is required - PurchaseOrderSchema"}
 {"instance":"controller","level":"error","message":"error on create order purchase","service":"createPurchaseOrder","trace":"Error creating a new purchase order PurchaseOrder validation failed: owner: An user is required to create a project"}
@@ -65,3 +65,4 @@
 {"level":"error","message":"error consultar categoria","service":"getProductByCategoryService","trace":"Can't use $contains with Array."}
 {"level":"error","message":"error consultar categoria","service":"getProductByCategoryService","trace":"Can't use $contains with Array."}
 {"level":"error","message":"error consultar categoria","service":"getProductByCategoryService","trace":"Can't use $contains with Array."}
+{"code":11000,"index":0,"level":"error","service":"product-service"}

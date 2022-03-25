@@ -2,13 +2,14 @@ import { userTokenValidation } from './../../auth/middleware/userTokenValidation
 import { deleteProduct, editProduct, getProductById, getProductByCategory } from './../controllers/productController';
 import { Router } from 'express';
 import { createProduct, getProducts } from '../controllers';
+import { isAdminValitation } from '../../auth/middleware/isAdminValidation';
 
 const router: Router = Router();
 
 router.get('/products', getProducts);
 router.get('/products/:prod_id', getProductById);
 router.get('/products/by_cat/:cat_id', getProductByCategory);
-router.post('/products', userTokenValidation, createProduct);
+router.post('/products', userTokenValidation, isAdminValitation, createProduct);
 router.put('/products/:prod_id', editProduct);
 router.delete('/products/:prod_id', deleteProduct);
 
